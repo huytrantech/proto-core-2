@@ -12,3 +12,4 @@ echo "Step 1: Generate proto code golang"
 } || {
   echo "FAIL!"
 }
+
