@@ -1,0 +1,18 @@
+syntax="proto3";
+package product;
+option go_package="proto-core/product_services";
+
+service ProductService{
+  rpc GetProduct(GetProductRequest) returns (GetProductResponse){}
+  rpc GetProduct2(GetProductRequest) returns (GetProductResponse){}
+}
+
+message GetProductRequest{
+  string sku = 1;
+}
+
+message GetProductResponse{
+  string sku = 1;
+  string name = 2;
+  string order_number = 3;
+}

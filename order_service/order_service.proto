@@ -1,0 +1,22 @@
+syntax="proto3";
+package order;
+option go_package="proto-core/order_services";
+service OrderService{
+  rpc GetOrder(GetOrderRequest) returns (GetOrderResponse) {};
+  rpc GetOrder2(GetOrderRequest) returns (GetOrderResponse) {};
+}
+
+message GetOrderRequest{
+  string order_number = 1;
+}
+
+message GetOrderResponse{
+  string order_number = 1;
+  float total_order = 2;
+  string address = 3;
+  ProductDetail product_detail = 4;
+}
+
+message ProductDetail{
+  string name_product = 1;
+}
